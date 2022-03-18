@@ -13,14 +13,15 @@ public class Exercise {
     private Long id;
     private String name;
     private String description;
-
+    private String gifFile;
     public Exercise() {
     }
 
-    public Exercise(Long id, String name, String description) {
+    public Exercise(Long id, String name, String description, String gifFile) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.gifFile = gifFile;
     }
 
     public Long getId() {
