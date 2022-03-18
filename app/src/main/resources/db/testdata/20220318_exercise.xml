@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="20220318-testdata-1" author="lebiecki">
+        <insert tableName="exercise">
+            <column name="name" value="Up and down the spots"/>
+            <column name="description" value="Aim at the chalk and back to the tip."/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="name" value="Road block colour clearance"/>
+            <column name="description" value="Clear the colours touching the reds or the triangles."/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="name" value="Up and down and cue between 2 reds"/>
+            <column name="description" value="Avoid hitting the reds."/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="name" value="Feather"/>
+            <column name="description" value="Make contact with the red ball without potting the colour."/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="name" value="Full ball cannon"/>
+            <column name="description" value="Cannon red and white around pink spot."/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
