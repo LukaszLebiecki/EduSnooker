@@ -1,6 +1,7 @@
 package pl.lukaszlebiecki.app.domain.exercise;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -13,6 +14,7 @@ class ExerciseService {
     }
 
     public Optional<Exercise> findById(Long id) {
-        return exerciseRepository.findById(id);
+        Optional<Exercise> optionalExercise = exerciseRepository.findById(id);
+        return optionalExercise;
     }
 }

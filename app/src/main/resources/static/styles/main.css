@@ -79,3 +79,10 @@ footer {
     margin-top: 10px;
     text-align: center;
 }
+
+/*wysrodkowanie obrazka z cwiczeniem*/
+ .image {
+     display: flex;
+     height: 100%;
+     margin: auto;
+ }

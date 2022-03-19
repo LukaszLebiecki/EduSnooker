@@ -4,7 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
-    <include file="20220318_create_table_exercise.xml" relativeToChangelogFile="true" context="dev"/>
-    <include file="testdata/20220318_exercise.xml" relativeToChangelogFile="true" context="dev"/>
+    <include file="20220318_create_table_exercise.xml" relativeToChangelogFile="true"/>
+    <include file="testdata/20220318_exercise.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
 

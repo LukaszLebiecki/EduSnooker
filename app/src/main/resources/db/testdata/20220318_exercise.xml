@@ -8,27 +8,27 @@
         <insert tableName="exercise">
             <column name="name" value="Up and down the spots"/>
             <column name="description" value="Aim at the chalk and back to the tip."/>
-            <column name="gifFile" value="test1.gif"/>
+            <column name="gif_file" value="/image/test1.gif"/>
         </insert>
         <insert tableName="exercise">
             <column name="name" value="Road block colour clearance"/>
             <column name="description" value="Clear the colours touching the reds or the triangles."/>
-            <column name="gifFile" value="test2.gif"/>
+            <column name="gif_file" value="/image/test2.gif"/>
         </insert>
         <insert tableName="exercise">
             <column name="name" value="Up and down and cue between 2 reds"/>
             <column name="description" value="Avoid hitting the reds."/>
-            <column name="gifFile" value="test3.gif"/>
+            <column name="gif_file" value="/image/test3.gif"/>
         </insert>
         <insert tableName="exercise">
             <column name="name" value="Feather touch"/>
             <column name="description" value="Make contact with the red ball without potting the colour."/>
-            <column name="gifFile" value="test4.gif"/>
+            <column name="gif_file" value="/image/test4.gif"/>
         </insert>
         <insert tableName="exercise">
             <column name="name" value="Full ball cannon"/>
             <column name="description" value="Cannon red and white around pink spot."/>
-            <column name="gifFile" value="test5.gif"/>
+            <column name="gif_file" value="/image/test5.gif"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

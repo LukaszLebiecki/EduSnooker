@@ -14,6 +14,7 @@ public class Exercise {
     private String name;
     private String description;
     private String gifFile;
+
     public Exercise() {
     }
 
