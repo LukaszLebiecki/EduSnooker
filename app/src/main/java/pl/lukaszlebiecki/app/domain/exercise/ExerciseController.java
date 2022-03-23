@@ -28,6 +28,9 @@ class ExerciseController {
             Exercise exercise = exerciseOptional.get();
             model.addAttribute("exercise_name",exercise.getName());
             model.addAttribute("exercise_description", exercise.getDescription());
+            model.addAttribute("target1", exercise.getTarget1());
+            model.addAttribute("target2", exercise.getTarget2());
+            model.addAttribute("target3", exercise.getTarget3());
             model.addAttribute("gif_file", exercise.getGifFile());
         }
         return "exercise.html";

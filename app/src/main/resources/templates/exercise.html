@@ -20,14 +20,66 @@
 </section>
 <div class="main">
     <section class="column1">
-
+        <div class="text_col1">
+            <h1 th:text="${exercise_name}">Tytuł ćwiczenia</h1>
+            <p th:text="${exercise_description}">Opis</p>
+            <p><br/></p>
+            <h3>Why this Is a Good Exercise</h3>
+            <div>
+                <p th:text="${target1}"></p>
+                <p th:text="${target2}"></p>
+                <p th:text="${target3}"></p>
+            </div>
+        </div>
     </section>
     <section class="column2">
         <img class="image" th:src="@{${gif_file}}">
     </section>
     <section class="column3">
-        <h1 th:text="${exercise_name}">Tytuł ćwiczenia</h1>
-        <p th:text="${exercise_description}">Opis</p>
+        <div>
+            <p></p>
+            <table>
+                <tr>
+                    <th>DATA</th>
+                    <th>EXERCISE</th>
+                    <th>TIME</th>
+                    <th>POINT</th>
+                </tr>
+                <tr class="today">
+                    <td>23-03-2022</td>
+                    <td>#001</td>
+                    <td>0:23</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>21-03-2022</td>
+                    <td>#034</td>
+                    <td>0:14</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>07-08-2021</td>
+                    <td>#012</td>
+                    <td>0:23</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>30-05-2021</td>
+                    <td>#034</td>
+                    <td>0:23</td>
+                    <td>3</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="scoring">
+            <h4>Max point this exercise: <a>33</a></h4>
+            <h4>Average point this exercise: <a>21</a></h4>
+            <h4>Total time this exercise: <a>3:12</a></h4>
+            <h3>Scoring:</h3>
+            <p>Tutaj opis punktacji ćwiczenia trzeba zdefinować pole w klasie. Ten opis raczej nie bedzie zbyt długi
+            ale trzeba coś tu napisać dla symlacji Tak takst jest tylo do celów delevoperskich.</p>
+        </div>
     </section>
 </div>
 <footer>EduSnooker ®, developed by LukaszLebiecki.pl</footer>

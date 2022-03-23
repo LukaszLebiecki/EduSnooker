@@ -7,28 +7,19 @@
     <changeSet id="20220318-testdata-1" author="lebiecki">
         <insert tableName="exercise">
             <column name="name" value="Up and down the spots"/>
-            <column name="description" value="Aim at the chalk and back to the tip."/>
-            <column name="gif_file" value="/image/test1.gif"/>
+            <column name="description" value="Place a chalk on the
+            cushion in line with the black spot, place the cue ball on the brown spot and 2 reds behind the cue ball
+            only showing a small segment in the centre. Aiming at the chalk, hit the cue ball over the 4 spots and back
+            to the tip of your cue."/>
+            <column name="target1" value="1. Ensures straight cueing"/>
+            <column name="target2" value="2. Requires you to stay down on the shot"/>
+            <column name="target3" value="3. Develops touch"/>
+            <column name="gif_file" value="/image/es_001.gif"/>
         </insert>
         <insert tableName="exercise">
             <column name="name" value="Road block colour clearance"/>
             <column name="description" value="Clear the colours touching the reds or the triangles."/>
-            <column name="gif_file" value="/image/test2.gif"/>
-        </insert>
-        <insert tableName="exercise">
-            <column name="name" value="Up and down and cue between 2 reds"/>
-            <column name="description" value="Avoid hitting the reds."/>
-            <column name="gif_file" value="/image/test3.gif"/>
-        </insert>
-        <insert tableName="exercise">
-            <column name="name" value="Feather touch"/>
-            <column name="description" value="Make contact with the red ball without potting the colour."/>
-            <column name="gif_file" value="/image/test4.gif"/>
-        </insert>
-        <insert tableName="exercise">
-            <column name="name" value="Full ball cannon"/>
-            <column name="description" value="Cannon red and white around pink spot."/>
-            <column name="gif_file" value="/image/test5.gif"/>
+            <column name="gif_file" value="/image/es_002.gif"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

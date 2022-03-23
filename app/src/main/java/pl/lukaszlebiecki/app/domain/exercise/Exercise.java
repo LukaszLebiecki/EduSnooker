@@ -13,6 +13,9 @@ public class Exercise {
     private Long id;
     private String name;
     private String description;
+    private String target1;
+    private String target2;
+    private String target3;
     private String gifFile;
 
     public Exercise() {
