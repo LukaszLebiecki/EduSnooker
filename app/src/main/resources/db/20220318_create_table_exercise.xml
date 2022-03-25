@@ -15,6 +15,19 @@
             <column name="target2" type="VARCHAR(200)"/>
             <column name="target3" type="VARCHAR(200)"/>
             <column name="gif_file" type="VARCHAR(100)"/>
+            <column name="advancement_levels" type="ENUM('BEGINNER', 'PRE_INTERMEDIATE', 'INTERMEDIATE', 'UPPER_INTERMEDIATE', 'ADVANCED', 'PROFESSIONAL')" defaultValue="BEGINNER"/>
+            <column name="attempts" type="INT" defaultValue="0"/>
+            <column name="max_point_per_attempt" type="INT" defaultValue="0"/>
+            <column name="number_of_point_to_pass" type="INT" defaultValue="0"/>
+            <column name="is_red" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_yellow" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_green" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_brown" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_blue" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_pink" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_black" type="BOOLEAN" defaultValue="false"/>
+            <column name="is_extra_point" type="BOOLEAN" defaultValue="false"/>
+
         </createTable>
     </changeSet>
 </databaseChangeLog>

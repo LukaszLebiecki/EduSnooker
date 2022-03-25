@@ -15,6 +15,18 @@
             <column name="target2" value="2. Requires you to stay down on the shot"/>
             <column name="target3" value="3. Develops touch"/>
             <column name="gif_file" value="/image/es_001.gif"/>
+            <column name="advancement_levels" value="BEGINNER"/>
+            <column name="attempts" value="10"/>
+            <column name="max_point_per_attempt" value="10"/>
+            <column name="number_of_point_to_pass" value="10"/>
+            <column name="is_red" value="false"/>
+            <column name="is_yellow" value="false"/>
+            <column name="is_green" value="false"/>
+            <column name="is_brown" value="false"/>
+            <column name="is_blue" value="false"/>
+            <column name="is_pink" value="false"/>
+            <column name="is_black" value="false"/>
+            <column name="is_extra_point" value="false"/>
         </insert>
         <insert tableName="exercise">
             <column name="name" value="Road block colour clearance"/>
