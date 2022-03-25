@@ -17,7 +17,7 @@
             <column name="gif_file" value="/image/es_001.gif"/>
             <column name="advancement_levels" value="BEGINNER"/>
             <column name="attempts" value="10"/>
-            <column name="max_point_per_attempt" value="10"/>
+            <column name="max_point_per_attempt" value="1"/>
             <column name="number_of_point_to_pass" value="10"/>
             <column name="is_red" value="false"/>
             <column name="is_yellow" value="false"/>
