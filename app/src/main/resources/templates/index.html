@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<nav th:replace="fragments :: nav"></nav>
+<section class="clock-bar">
+    <h1>WELCOME TO THE EDUSNOOKER WEBSITE</h1>
+</section>
+<div class="clock-bar"
+     th:unless="${#authentication.getName() eq 'anonymousUser'}">
+    <h3><a href="/exercise/1">>>> Exercise_1 <<<     </a></h3>
+    <h3><a href="/exercise/2">>>> Exercise_2 <<<</a></h3>
+</div>
+
+<footer th:replace="fragments :: footer"></footer>
+</body>
+</html>

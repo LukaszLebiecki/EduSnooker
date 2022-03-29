@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>eduSnooker</title>
+    <link rel="stylesheet" th:href="@{/styles/main.css}">
+</head>
+
+<nav th:fragment="nav" class="navbar">
+    <a><img th:src="@{/image/es.png}"></a>
+    <a th:unless="${#authentication.getName() eq 'anonymousUser'}"
+       th:text="|logout ${#authentication.name}|"
+       th:href="@{/logout}" class="login-button">Sign</a>
+    <a th:if="${#authentication.getName() eq 'anonymousUser'}"
+       th:text="Sign"
+       th:href="@{/login}" class="login-button">Sign</a>
+</nav>
+
+<footer th:fragment="footer">
+    EduSnooker ®, developed by LukaszLebiecki.pl
+</footer>
