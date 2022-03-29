@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" th:href="@{/styles/main.css}">
+</head>
+<body>
+<nav class="navbar">
+    <a><img th:src="@{/image/es.png}"></a>
+    <a href="/login" class="login-button">Zaloguj</a>
+</nav>
+<section>
+    <div>
+        <form class="login-form" action="/login" method="post">
+            <input name="username" placeholder="nazwa użytkownika" class="form-item">
+            <input name="password" placeholder="hasło" type="password" class="form-item">
+            <button type="submit" class="form-item">Zaloguj się</button>
+        </form>
+    </div>
+</section>
+<footer>EduSnooker ®, developed by LukaszLebiecki.pl</footer>
+</body>
+</html>

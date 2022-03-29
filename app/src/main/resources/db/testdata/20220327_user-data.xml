@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="20220327-userdata-1" author="lebiecki">
+        <insert tableName="user">
+            <column name="first_name" value="Jan"/>
+            <column name="last_name" value="Kowalski"/>
+            <column name="email" value="superadmin@example.com"/>
+            <column name="password" value="{bcrypt}$2a$10$Ruu5GtmSVkfLeuGfz/wHUuzflCcMbwJHSBo/.Wui0EM0KIM52Gs2S"/>
+        </insert>
+        <insert tableName="user">
+            <column name="first_name" value="John"/>
+            <column name="last_name" value="Abacki"/>
+            <column name="email" value="john@example.com"/>
+            <column name="password" value="{MD5}{AlZCLSQMMNLBS5mEO0kSem9V3mxplC6cTjWy9Kj/Gxs=}d9007147eb3a5f727b2665d647d36e35"/>
+        </insert>
+        <insert tableName="user">
+            <column name="first_name" value="Marek"/>
+            <column name="last_name" value="Zalewski"/>
+            <column name="email" value="java_lover@example.com"/>
+            <column name="password" value="{argon2}$argon2id$v=19$m=4096,t=3,p=1$YBBBwx+kfrNgczYDcLlWYA$LEPgdtfskoobyFtUWTMejaE5SBRyieHYbiE5ZmFKE7I"/>
+        </insert>
+        <insert tableName="user_role">
+            <column name="name" value="ADMIN"/>
+            <column name="description" value="Ma dostęp do wszystkiego"/>
+        </insert>
+        <insert tableName="user_role">
+            <column name="name" value="USER"/>
+            <column name="description" value="Dostęp tylko do odczytu"/>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="user_id" value="1"/>
+            <column name="role_id" value="1"/>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="user_id" value="2"/>
+            <column name="role_id" value="2"/>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="user_id" value="3"/>
+            <column name="role_id" value="2"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
