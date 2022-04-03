@@ -13,12 +13,23 @@
 <section>
     <div>
         <form class="login-form" action="/login" method="post">
-            <input name="username" placeholder="nazwa użytkownika" class="form-item">
-            <input name="password" placeholder="hasło" type="password" class="form-item">
-            <button type="submit" class="form-item">Zaloguj się</button>
+            <div>
+                <h2 class="login-form-title">Login to eduSnooker</h2>
+            </div>
+            <div>
+                <input name="username" placeholder="user name">
+            </div>
+            <div>
+                <input name="password" placeholder="password" type="password">
+            </div>
+            <p>You don't have an account?  <a th:href="@{/register}">SIGN IN</a></p>
+            <button type="submit" class="form-item">LOGIN</button>
         </form>
-    </div>
-</section>
-<footer>EduSnooker ®, developed by LukaszLebiecki.pl</footer>
+    </section>
+    <section class="box-img">
+        <img th:src="@{/image/Frank01.png}">
+    </section>
+</div>
+<footer th:replace="fragments :: footer"></footer>
 </body>
 </html>

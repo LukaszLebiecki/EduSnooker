@@ -8,13 +8,13 @@
 </head>
 
 <nav th:fragment="nav" class="navbar">
-    <a><img th:src="@{/image/es.png}"></a>
+    <a th:href="@{/}"><img th:src="@{/image/es.png}"></a>
     <a th:unless="${#authentication.getName() eq 'anonymousUser'}"
        th:text="|logout ${#authentication.name}|"
-       th:href="@{/logout}" class="login-button">Sign</a>
+       th:href="@{/logout}" class="login-button">Login</a>
     <a th:if="${#authentication.getName() eq 'anonymousUser'}"
-       th:text="Sign"
-       th:href="@{/login}" class="login-button">Sign</a>
+       th:text="Login"
+       th:href="@{/login}" class="login-button">Login</a>
 </nav>
 
 <footer th:fragment="footer">

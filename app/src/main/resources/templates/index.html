@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments :: head"></head>
+
+<nav th:unless="${#authentication.getName() eq 'anonymousUser'}" th:insert="fragments :: nav"></nav>
+
 <body>
-<nav th:replace="fragments :: nav"></nav>
-<section class="clock-bar">
-    <h1>WELCOME TO THE EDUSNOOKER WEBSITE</h1>
-</section>
-<div class="clock-bar"
-     th:unless="${#authentication.getName() eq 'anonymousUser'}">
-    <h3><a href="/exercise/1">>>> Exercise_1 <<<     </a></h3>
-    <h3><a href="/exercise/2">>>> Exercise_2 <<<</a></h3>
+
+<div th:if="${#authentication.getName() eq 'anonymousUser'}" class="index">
+    <section>
+        <a href="/login"><img class="image" alt="Logo strony eduSnooker" th:src="@{/image/index.png}"></a>
+    </section>
 </div>
 
-<footer th:replace="fragments :: footer"></footer>
+<div th:unless="${#authentication.getName() eq 'anonymousUser'}" class="main">
+    <section class="box-img">
+        <img th:src="@{/image/Frank02.png}">
+    </section>
+    <section class="box-main">
+        <form method="get" class="login-form">
+            <a type="submit" th:href="@{/exercise}" class="form-item">EXERCISE</a>
+            <a type="submit" th:href="@{/exercise}" class="form-item">STATISTICS</a>
+            <a type="submit" th:href="@{/exercise}" class="form-item">BASIS OF THE TECHNIQUE</a>
+            <a type="submit" th:href="@{/exercise}" class="form-item">SCOREBOARD</a>
+            <a type="submit" th:href="@{/exercise}" class="form-item">SETTINGS</a>
+        </form>
+    </section>
+    <section class="box-img">
+        <img th:src="@{/image/Frank01.png}">
+    </section>
+</div>
+<footer th:unless="${#authentication.getName() eq 'anonymousUser'}" th:insert="fragments :: footer"></footer>
 </body>
 </html>

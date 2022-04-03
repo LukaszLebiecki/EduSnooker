@@ -1,40 +1,40 @@
- /*pozbywamy się podkreśleń linków*/
+/*pozbywamy się podkreśleń linków*/
 a {
     text-decoration: none;
 }
 
 /* logo po lewej stronie, przycisk logowania po prawej*/
- .navbar {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 5px 0;
- }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
 
- /* efekt przycisku logowania */
- .login-button {
-     background-color: green;
-     color: white;
-     font-size: 1em;
-     text-transform: uppercase;
-     padding: 5px 30px;
-     line-height: 30px;
-     font-weight: 500;
-     letter-spacing: .1em;
-     font-family: 'Roboto', sans-serif;
- }
+/* efekt przycisku logowania */
+.login-button {
+    background-color: green;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 5px 30px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    font-family: 'Roboto', sans-serif;
+}
 
- /* po najechaniu na przycisk lekka przezroczystość */
- .login-button:hover {
-     opacity: 80%;
- }
+/* po najechaniu na przycisk lekka przezroczystość */
+.login-button:hover {
+    opacity: 80%;
+}
 
 /* wycentrowanie zegara i przycisku*/
- .clock-bar {
-     display: flex;
-     justify-content: center;
-     text-align: center;
- }
+.clock-bar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 /* wielkość zegara*/
 .clock-bar > form > div > a {
@@ -42,26 +42,27 @@ a {
 }
 
 /*wielkość przycisku START*/
- .clock-bar > form > button {
-     height: 50px;
-     width: 300px;
-     margin: 20px;
- }
+.clock-bar > form > button {
+    height: 50px;
+    width: 300px;
+    margin: 20px;
+}
 
- /*formatowanie sekcji main column*/
- .main {
-     display: flex;
- }
+/*formatowanie sekcji main column*/
+.main {
+    display: flex;
+}
 
- /*tło i rozmiar sekcji column*/
- .column1,
- .column3 {
-     background-color: whitesmoke;
-     margin: 20px;
-     width: 25%;
-     height: 460px;
+/*tło i rozmiar sekcji column*/
+.column1,
+.column3 {
+    background-color: whitesmoke;
+    margin: 20px;
+    width: 25%;
+    height: 460px;
 
- }
+}
+
 .column2 {
     background-color: whitesmoke;
     margin: 20px;
@@ -83,49 +84,124 @@ footer {
 }
 
 /*wysrodkowanie obrazka z cwiczeniem*/
- .image {
-     display: flex;
-     width: 100%;
-     margin: auto;
- }
+.image {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
 
- /*formatowanie tekstu w columna1*/
- .text_col1{
-     text-align: justify;
-     margin: 30px;
-     font-family: 'Roboto', sans-serif;
- }
+/*formatowanie tekstu w columna1*/
+.text_col1 {
+    text-align: justify;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+}
 
 /* formatowanie tabeli*/
- table {
-     width: 100%;
-     display: table;
-     font-family: 'Roboto', sans-serif;
- }
+table {
+    width: 100%;
+    display: table;
+    font-family: 'Roboto', sans-serif;
+}
 
- td {
-     text-align: center;
- }
+td {
+    text-align: center;
+}
 
- .today {
-     font-size: 1.1em;
-     background-color: lightgray;
- }
+.today {
+    font-size: 1.1em;
+    background-color: lightgray;
+}
 
 /* formatowanie tekstu w sekcji scoring*/
- .scoring {
-     font-family: 'Roboto', sans-serif;
-     margin: 30px;
-     text-align: justify;
- }
+.scoring {
+    font-family: 'Roboto', sans-serif;
+    margin: 30px;
+    text-align: justify;
+}
 
 /* wyrównanie danych pod tabelą*/
- .scoring > h4  {
-     text-align: justify;
-     }
+.scoring > h4 {
+    text-align: justify;
+}
 
- .scoring > h4 > a {
+.scoring > h4 > a {
 
-     float: right;
- }
+    float: right;
+}
+
+/* centrowanie strony startowej*/
+.index {
+    display: flex;
+    margin: 200px;
+    width: auto;
+    justify-content: center;
+    horiz-align: center;
+
+}
+
+/* centrowanie formularza logowania oraz dwóch box na img*/
+.box-img {
+    margin: 20px;
+    width: 20%;
+    height: 600px;
+}
+
+.box-main {
+    margin: 20px;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    horiz-align: center;
+}
+
+.box-img > img {
+    height: 100%;
+}
+
+/* Ramka, marginesy, wyśrodkowanie i maksymalna szerokość */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #BDBDBD;
+    justify-content: center;
+    align-content: center;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+/* Marginesy i rozmiar czcionki */
+.login-form > div > *,
+.login-form > p,
+.login-form > a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    margin: 16px;
+}
+
+/* Większe inputy i przycisk, aby były wygodniejsze na urządzeniach mobilnych */
+.login-form > div > input,
+.login-form > button,
+.login-form > a {
+    padding: 20px;
+    border: 1px solid #BDBDBD;
+    width: content-box;
+}
+
+.login-form > button:hover,
+.login-form > a:hover {
+    opacity: 80%;
+}
+
+.login-form-title {
+    margin: 16px auto;
+}
+
+.form-item {
+    color: white;
+    background-color: green;
+    font-size: 1.2em;
+    margin: 16px;
+}
+
 

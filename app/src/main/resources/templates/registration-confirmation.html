@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<nav th:replace="fragments :: nav"></nav>
+<div class="main">
+    <section class="box-img">
+        <img th:src="@{/image/Frank02.png}">
+    </section>
+    <section class="box-main">
+        <h2>WELCOME TO THE EDUSNOOKER</h2>
+        <div class="container">
+            <h1><a href="#" th:href="@{/login}">LOGIN</a></h1>
+        </div>
+    </section>
+    <section class="box-img">
+        <img th:src="@{/image/Frank01.png}">
+    </section>
+</div>
+<footer th:replace="fragments :: footer"></footer>
+</body>
+</html>

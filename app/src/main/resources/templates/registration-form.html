@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+<nav th:replace="fragments :: nav"></nav>
+<div class="main">
+    <section class="box-img">
+        <img th:src="@{/image/Frank02.png}">
+    </section>
+    <section class="box-main">
+        <form class="login-form" action="/register" method="post" th:object="${user}">
+            <div>
+                <h2 class="login-form-title">Register to eduSnooker</h2>
+            </div>
+            <div>
+                <input th:field="*{name}" placeholder="user name">
+            </div>
+            <div>
+                <input th:field="*{email}" placeholder="email" type="email">
+            </div>
+            <div>
+                <input th:field="*{password}" placeholder="password" type="password">
+            </div>
+            <button type="submit" class="form-item">SIGN IN</button>
+        </form>
+    </section>
+    <section class="box-img">
+        <img th:src="@{/image/Frank01.png}">
+    </section>
+</div>
+<footer th:replace="fragments :: footer"></footer>
+</body>
+</html>
