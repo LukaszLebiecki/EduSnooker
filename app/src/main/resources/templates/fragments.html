@@ -8,9 +8,22 @@
 </head>
 
 <nav th:fragment="nav" class="navbar">
-    <a th:href="@{/}"><img th:src="@{/image/es.png}"></a>
+    <a class="navbar_left" th:href="@{/}"><img th:src="@{/image/es.png}"></a>
+
+    <a class="nav_user" th:unless="${#authentication.getName() eq 'anonymousUser'}">
+        <div>
+            <img th:src="|@{/image/}${level}|">
+        </div>
+        <div>
+            <h2 th:text="${name}"></h2>
+        </div>
+        <div>
+            <img th:src="|@{/image/}${progress}|">
+        </div>
+    </a>
+
     <a th:unless="${#authentication.getName() eq 'anonymousUser'}"
-       th:text="|logout ${#authentication.name}|"
+       th:text="logout"
        th:href="@{/logout}" class="login-button">Login</a>
     <a th:if="${#authentication.getName() eq 'anonymousUser'}"
        th:text="Login"
