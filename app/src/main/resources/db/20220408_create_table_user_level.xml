@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="20220408" author="lebiecki">
+        <createTable tableName="user_level">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="level" type="VARCHAR(6)" defaultValue="l0.png"/>
+            <column name="progress" type="VARCHAR(6)" defaultValue="00.png"/>
+        </createTable>
+        <addColumn tableName="user">
+            <column name="user_level_id" type="BIGINT"/>
+        </addColumn>
+        <addForeignKeyConstraint baseTableName="user" baseColumnNames="user_level_id" constraintName="fk_user_level"
+                                 referencedTableName="user_level"
+                                 referencedColumnNames="id"/>
+
+        <insert tableName="user_level">
+            <column name="level" value="l5.png"/>
+            <column name="progress" value="52.png"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

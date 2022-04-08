@@ -9,6 +9,7 @@
             <column name="name" value="Łukasz"/>
             <column name="email" value="admin@admin.com"/>
             <column name="password" value="{bcrypt}$2a$10$Ruu5GtmSVkfLeuGfz/wHUuzflCcMbwJHSBo/.Wui0EM0KIM52Gs2S"/>
+            <column name="user_level_id" value="1"/>
         </insert>
         <insert tableName="user_role">
             <column name="name" value="ADMIN"/>
