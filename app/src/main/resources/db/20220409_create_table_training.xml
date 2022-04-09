@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="20220409" author="lebiecki">
+        <createTable tableName="training">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="email" type="VARCHAR(50)"/>
+            <column name="exercise_number" type="VARCHAR(20)"/>
+            <column name="date" type="DATE"/>
+            <column name="start_time" type="TIME"/>
+            <column name="end_time" type="TIME"/>
+            <column name="points_scored" type="INT"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="training" baseColumnNames="email" constraintName="fk_training"
+                                 referencedTableName="user"
+                                 referencedColumnNames="email"/>
+
+
+        <insert tableName="training">
+            <column name="email" value="admin@admin.com"/>
+            <column name="exercise_number" value="#023"/>
+            <column name="date" value="2022-04-01"/>
+            <column name="start_time" value="12:05:01"/>
+            <column name="end_time" value="12:43:00"/>
+            <column name="points_scored" value="12"/>
+        </insert>
+
+        <insert tableName="training">
+            <column name="email" value="admin@admin.com"/>
+            <column name="exercise_number" value="#022"/>
+            <column name="date" value="2022-03-02"/>
+            <column name="start_time" value="13:05:01"/>
+            <column name="end_time" value="14:43:00"/>
+            <column name="points_scored" value="10"/>
+        </insert>
+
+        <insert tableName="training">
+            <column name="email" value="admin@admin.com"/>
+            <column name="exercise_number" value="#012"/>
+            <column name="date" value="2022-02-01"/>
+            <column name="start_time" value="15:10:00"/>
+            <column name="end_time" value="15:30:00"/>
+            <column name="points_scored" value="12"/>
+        </insert>
+
+        <insert tableName="training">
+            <column name="email" value="admin@admin.com"/>
+            <column name="exercise_number" value="#023"/>
+            <column name="date" value="2022-01-01"/>
+            <column name="start_time" value="12:30:00"/>
+            <column name="end_time" value="12:53:00"/>
+            <column name="points_scored" value="20"/>
+        </insert>
+
+
+    </changeSet>
+</databaseChangeLog>
