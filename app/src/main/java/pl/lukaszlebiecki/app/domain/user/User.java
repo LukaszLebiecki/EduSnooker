@@ -27,8 +27,17 @@ class User {
     private Set<UserRole> roles = new HashSet<>();
     @OneToOne
     private UserLevel userLevel;
+    @OneToMany
+    @JoinColumn(name = "email")
+    private List<Training> trainings = new ArrayList<>();
 
+    public List<Training> getTrainings() {
+        return trainings;
+    }
 
+    public void setTrainings(List<Training> trainings) {
+        this.trainings = trainings;
+    }
 
     public Long getId() {
         return id;
@@ -78,15 +87,5 @@ class User {
         this.userLevel = userLevel;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", roles=" + roles +
-                ", userLevel=" + userLevel +
-                '}';
-    }
+
 }

@@ -45,30 +45,30 @@
                     <th>TIME</th>
                     <th>POINT</th>
                 </tr>
-                <tr class="today">
-                    <td>23-03-2022</td>
-                    <td>#001</td>
-                    <td>0:23</td>
-                    <td>12</td>
+                <tr class="today" th:each="training: ${trainings}">
+                    <td th:text="${training.getDate()}">23-03-2022</td>
+                    <td th:text="${training.getExerciseNumber()}">#001</td>
+                    <td th:text="${training.getEndTime()}">0:23</td>
+                    <td th:text="${training.getPointsScored()}">12</td>
                 </tr>
-                <tr>
-                    <td>21-03-2022</td>
-                    <td>#034</td>
-                    <td>0:14</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>07-08-2021</td>
-                    <td>#012</td>
-                    <td>0:23</td>
-                    <td>32</td>
-                </tr>
-                <tr>
-                    <td>30-05-2021</td>
-                    <td>#034</td>
-                    <td>0:23</td>
-                    <td>3</td>
-                </tr>
+<!--                <tr>-->
+<!--                    <td>21-03-2022</td>-->
+<!--                    <td>#034</td>-->
+<!--                    <td>0:14</td>-->
+<!--                    <td>15</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>07-08-2021</td>-->
+<!--                    <td>#012</td>-->
+<!--                    <td>0:23</td>-->
+<!--                    <td>32</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>30-05-2021</td>-->
+<!--                    <td>#034</td>-->
+<!--                    <td>0:23</td>-->
+<!--                    <td>3</td>-->
+<!--                </tr>-->
 
             </table>
         </div>
